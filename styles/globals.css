@@ -1,0 +1,10 @@
+@import 'colors.css';
+@import 'document.css';
+@import 'grid.css';
+@import 'font-antique-olive-std.css';
+@import 'roboto.css';
+@import 'typography.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
