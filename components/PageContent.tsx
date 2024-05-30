@@ -2,7 +2,7 @@ import {
   CalendarIcon,
   LinkIcon,
   VideoCameraIcon,
-} from '@heroicons/react/outline';
+} from '@heroicons/react/24/solid';
 import React from 'react';
 
 import { useRouter } from 'next/router';

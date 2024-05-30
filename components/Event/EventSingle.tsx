@@ -1,4 +1,4 @@
-import { SwitchVerticalIcon } from '@heroicons/react/outline';
+import { ArrowsUpDownIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
 import { EventI } from '@utils/infos';
@@ -41,7 +41,7 @@ const EventSingle = ({
                 'bg-red-500 h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
               }
             >
-              <SwitchVerticalIcon
+              <ArrowsUpDownIcon
                 className="w-5 h-5 text-white"
                 aria-hidden="true"
               />

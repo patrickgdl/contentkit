@@ -1,8 +1,8 @@
 import {
   CalendarIcon,
-  SpeakerphoneIcon,
-  SwitchVerticalIcon,
-} from '@heroicons/react/outline';
+  MegaphoneIcon,
+  ArrowsUpDownIcon,
+} from '@heroicons/react/24/solid';
 import React from 'react';
 
 import type { NextPage } from 'next';
@@ -19,14 +19,14 @@ const templateItems = [
     description: 'Vídeo template para momento de Gol',
     href: '/create',
     iconColor: 'bg-pink-500',
-    icon: SpeakerphoneIcon,
+    icon: MegaphoneIcon,
   },
   {
     name: 'Substituição',
     description: 'Vídeo template de Substituição',
     href: '/create?change=true',
     iconColor: 'bg-purple-500',
-    icon: SwitchVerticalIcon,
+    icon: ArrowsUpDownIcon,
   },
   {
     name: 'Evento',

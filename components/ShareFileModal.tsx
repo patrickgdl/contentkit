@@ -1,10 +1,10 @@
 import {
-  AnnotationIcon,
+  ChatBubbleBottomCenterTextIcon,
   CameraIcon,
-  DownloadIcon,
+  ArrowDownTrayIcon,
   HashtagIcon,
   RssIcon,
-} from '@heroicons/react/outline';
+} from '@heroicons/react/24/solid';
 import React from 'react';
 
 import { PortalBox } from '@theme';
@@ -53,7 +53,7 @@ const ShareFileModal = ({
       <ButtonGroup className="mx-0 my-8">
         <Link
           className="inline-flex py-0 px-8 h-12 bg-slate-800 text-white items-center font-bold m-0 rounded-lg"
-          icon={DownloadIcon}
+          icon={ArrowDownTrayIcon}
           href={videoFile}
           download
         >
@@ -74,7 +74,7 @@ const ShareFileModal = ({
           }
         />
         <Button
-          icon={AnnotationIcon}
+          icon={ChatBubbleBottomCenterTextIcon}
           className="bg-slate-400 hover:bg-slate-300 focus:ring-slate-500 border-slate-400"
           onPress={() =>
             alert('Alto lá TikTok! Esta é apenas uma demonstração por enquanto')

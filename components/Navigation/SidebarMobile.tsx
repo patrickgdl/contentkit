@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import { Fragment, useContext } from 'react';
 
 import Image from 'next/image';
@@ -61,7 +61,10 @@ const SidebarMobile = ({ links, route }: GenericSidebarProps) => {
                     className="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white"
                     onClick={() => toggleMenuOpen()}
                   >
-                    <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                    <XMarkIcon
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
                     <span className="sr-only">Close sidebar</span>
                   </button>
                 </div>

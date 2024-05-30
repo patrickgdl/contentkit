@@ -1,5 +1,9 @@
 import { Menu, Transition } from '@headlessui/react';
-import { MenuAlt2Icon, PlusIcon, SearchIcon } from '@heroicons/react/outline';
+import {
+  Bars3BottomLeftIcon,
+  PlusIcon,
+  MagnifyingGlassIcon,
+} from '@heroicons/react/24/solid';
 import { Fragment, useContext } from 'react';
 
 import Image from 'next/image';
@@ -34,7 +38,7 @@ const Header = () => {
         >
           <span className="sr-only">Abrir barra lateral</span>
 
-          <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
+          <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
         </button>
 
         <div className="flex-1 flex justify-between px-4 sm:px-6">
@@ -45,7 +49,7 @@ const Header = () => {
               </label>
               <div className="relative w-full text-gray-400 focus-within:text-gray-600">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
-                  <SearchIcon
+                  <MagnifyingGlassIcon
                     className="flex-shrink-0 h-5 w-5"
                     aria-hidden="true"
                   />
