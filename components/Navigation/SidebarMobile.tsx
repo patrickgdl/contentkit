@@ -1,4 +1,4 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { Fragment, useContext } from 'react';
 
@@ -22,21 +22,10 @@ const SidebarMobile = ({ links, route }: GenericSidebarProps) => {
   };
 
   return (
-    <Transition.Root show={menuOpen} as={Fragment}>
+    <Transition show={menuOpen} as={Fragment}>
       <Dialog as="div" className="md:hidden" onClose={toggleMenuOpen}>
         <div className="fixed inset-0 z-40 flex">
-          <Transition.Child
-            as={Fragment}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Dialog.Overlay className="fixed inset-0 bg-gray-600 bg-opacity-75" />
-          </Transition.Child>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="transition ease-in-out duration-300 transform"
             enterFrom="-translate-x-full"
@@ -46,7 +35,7 @@ const SidebarMobile = ({ links, route }: GenericSidebarProps) => {
             leaveTo="-translate-x-full"
           >
             <div className="relative max-w-xs w-full bg-red-700 pt-5 pb-4 flex-1 flex flex-col">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-in-out duration-300"
                 enterFrom="opacity-0"
@@ -68,17 +57,15 @@ const SidebarMobile = ({ links, route }: GenericSidebarProps) => {
                     <span className="sr-only">Close sidebar</span>
                   </button>
                 </div>
-              </Transition.Child>
+              </TransitionChild>
               <div className="flex-shrink-0 px-4 flex items-center">
                 <Link href="/">
-                  <a>
-                    <Image
-                      width={50}
-                      height={50}
-                      alt="CAP Logo"
-                      src="/cap-logo-white.svg"
-                    />
-                  </a>
+                  <Image
+                    width={50}
+                    height={50}
+                    alt="CAP Logo"
+                    src="/cap-logo-white.svg"
+                  />
                 </Link>
               </div>
               <div className="mt-5 flex-1 h-0 px-2 overflow-y-auto">
@@ -112,13 +99,13 @@ const SidebarMobile = ({ links, route }: GenericSidebarProps) => {
                 </nav>
               </div>
             </div>
-          </Transition.Child>
+          </TransitionChild>
           <div className="flex-shrink-0 w-14" aria-hidden="true">
             {/* Dummy element to force sidebar to shrink to fit close icon */}
           </div>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition>
   );
 };
 

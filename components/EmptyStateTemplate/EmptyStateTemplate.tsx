@@ -51,10 +51,10 @@ const EmptyStateTemplate = ({ items, route, title }: EmptyStateProps) => {
               <div className="min-w-0 flex-1">
                 <div className="text-sm font-medium text-gray-900">
                   <Link href={item.href}>
-                    <a href={item.href}>
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      {item.name}
-                    </a>
+
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    {item.name}
+
                   </Link>
                 </div>
 
@@ -73,10 +73,11 @@ const EmptyStateTemplate = ({ items, route, title }: EmptyStateProps) => {
       </ul>
 
       <div className="mt-6 flex">
-        <Link href={route}>
-          <a className="text-sm font-medium text-red-600 hover:text-red-500">
-            Ou comece um projeto vazio<span aria-hidden="true"> &rarr;</span>
-          </a>
+        <Link
+          href={route}
+          className="text-sm font-medium text-red-600 hover:text-red-500">
+          Ou comece um projeto vazio<span aria-hidden="true"> &rarr;</span>
+
         </Link>
       </div>
     </div>

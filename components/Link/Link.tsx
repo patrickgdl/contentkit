@@ -30,25 +30,25 @@ export default function Link(props: LinkProps): JSX.Element {
   let { linkProps } = useLink(props, ref);
 
   return (
-    <NextLink href={props.href}>
-      <a
-        {...linkProps}
-        ref={ref}
-        target={target}
-        className={className}
-        download={download}
-      >
-        {IconProp && (
-          <IconProp
-            className={classNames(
-              'text-white hover:text-slate-100 h-6 w-6 mr-1',
-              iconClassName
-            )}
-            aria-hidden="true"
-          />
-        )}
-        {children}
-      </a>
-    </NextLink>
+    (<NextLink
+      href={props.href}
+      {...linkProps}
+      ref={ref}
+      target={target}
+      className={className}
+      download={download}>
+
+      {IconProp && (
+        <IconProp
+          className={classNames(
+            'text-white hover:text-slate-100 h-6 w-6 mr-1',
+            iconClassName
+          )}
+          aria-hidden="true"
+        />
+      )}
+      {children}
+
+    </NextLink>)
   );
 }
